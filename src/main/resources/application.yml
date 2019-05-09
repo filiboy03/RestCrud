@@ -1,0 +1,17 @@
+server:
+    port: 8091
+
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+#spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+#spring.datasource.url = jdbc:mysql://localhost:3306/notes_app?useSSL=false
+spring:
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB:notes_app}
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:root}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: create

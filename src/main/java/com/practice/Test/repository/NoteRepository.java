@@ -5,6 +5,8 @@ import org.springframework.stereotype.Repository;
 
 import com.practice.Test.model.Note;
 
+
+
 @Repository
 public interface NoteRepository extends JpaRepository<Note,Long> {
 	
