@@ -22,7 +22,5 @@ public class TextRequest {
 	public String toString() {
 		return "TextRequest [id=" + id + ", name=" + name + "]";
 	}
-	
-	
-	
 }
+
